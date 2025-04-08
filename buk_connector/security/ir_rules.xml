@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2024 Konos
+    Licensed under the GPL-3.0 License or later. -->
+<odoo noupdate="1">
+    <record id="buk_instance_rule_global" model="ir.rule">
+        <field name="name">Buk Instance Multi-companys</field>
+        <field name="model_id" ref="buk_connector.model_buk_instance"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="buk_account_rule_global" model="ir.rule">
+        <field name="name">Buk Account Multi-companys</field>
+        <field name="model_id" ref="buk_connector.model_buk_account_mapping"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="buk_cost_center_rule_global" model="ir.rule">
+        <field name="name">Buk Cost Center Multi-companys</field>
+        <field name="model_id" ref="buk_connector.model_buk_cost_center_mapping"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="buk_period_rule_global" model="ir.rule">
+        <field name="name">Buk Period Multi-companys</field>
+        <field name="model_id" ref="buk_connector.model_buk_accounting_period"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

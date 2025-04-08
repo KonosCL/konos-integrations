@@ -1,3 +1,7 @@
+[![commitlint](https://github.com/KonosCL/konos-integrations/actions/workflows/commitlint.yml/badge.svg)](https://github.com/KonosCL/konos-integrations/actions/workflows/commitlint.yml)
+[![pre-commit](https://github.com/KonosCL/konos-integrations/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/KonosCL/konos-integrations/actions/workflows/pre-commit.yml)
+[![unittests](https://github.com/KonosCL/konos-integrations/actions/workflows/unittest.yml/badge.svg)](https://github.com/KonosCL/konos-integrations/actions/workflows/unittest.yml)
+
 ## Odoo Integrations
 
 Odoo Integrations related addons made it with  :heart:  by Konos.
@@ -6,7 +10,7 @@ Odoo Integrations related addons made it with  :heart:  by Konos.
 
 Name                                            | Version     | Summary
 ----------------------------------------------- | ----------- | ------------------------------- 
-
+[buk_connector](buk_connector/)                 | 18.0.2.0.0  | Streamlined connector for data synchronization with Odoo.
 
 ### Contributing
 
