@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2024 Konos
+    Licensed under the GPL-3.0 License or later. -->
+<odoo noupdate="1">
+    <record id="ir_cron_bank_statements" model="ir.cron">
+        <field name="name">Fintoc: Synchronize Bank Statements</field>
+        <field name="model_id" ref="account.model_account_bank_statement_line"/>
+        <field name="state">code</field>
+        <field name="code">model.sync_bank_statements()</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">180</field>
+        <field name="interval_type">minutes</field>
+        <field name="active" eval="False"/>
+    </record>
+    <record id="ir_cron_fix_bank_statement_balances" model="ir.cron">
+        <field name="name">Fintoc: Recompute Bank Statement Balances</field>
+        <field name="model_id" ref="account.model_account_bank_statement"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_fix_bank_statement_balances(date_from='2024-10-10')</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="active" eval="False"/>
+    </record>
+</odoo>

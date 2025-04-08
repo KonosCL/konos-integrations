@@ -11,6 +11,7 @@ Odoo Integrations related addons made it with  :heart:  by Konos.
 Name                                            | Version     | Summary
 ----------------------------------------------- | ----------- | ------------------------------- 
 [buk_connector](buk_connector/)                 | 18.0.2.0.0  | Streamlined connector for data synchronization with Odoo.
+[connector_fintoc](connector_fintoc/)           | 18.0.3.0.0  | Retrieve bank statements directly from Fintoc into Odoo.
 
 ### Contributing
 
