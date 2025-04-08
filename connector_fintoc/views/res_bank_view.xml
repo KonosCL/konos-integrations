@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2024 Konos
+    Licensed under the GPL-3.0 License or later. -->
+<odoo>
+    <record id="view_partner_bank_form" model="ir.ui.view">
+        <field name="name">view.partner.bank.form.inherit</field>
+        <field name="model">res.partner.bank</field>
+        <field name="inherit_id" ref="base.view_partner_bank_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="get_fintoc_account_id" string="Get Fintoc Account ID" type="object" class="oe_highlight"
+                        confirm="Are you sure you want to retrieve the Fintoc ID for this bank account?"/>
+                </header>
+            </xpath>
+            <xpath expr="//field[@name='bank_id']" position="after">
+                <field name="fintoc_token" password="True"/>
+                <field name="fintoc_id" password="True" readonly="True" invisible="not fintoc_token"/>
+                <field name="fintoc_days"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

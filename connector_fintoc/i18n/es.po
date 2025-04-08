@@ -1,0 +1,112 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* connector_fintoc
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e-20241007\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-03 22:25+0000\n"
+"PO-Revision-Date: 2024-12-03 22:25+0000\n"
+"Last-Translator: Alexander Olivares <aolivares@konos.cl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: connector_fintoc
+#: model:ir.model.fields,help:connector_fintoc.field_res_company__fintoc_api_key
+msgid "API Key used for request authentication"
+msgstr "API Key utilizada para la autenticación de solicitudes"
+
+#. module: connector_fintoc
+#: model_terms:ir.ui.view,arch_db:connector_fintoc.view_partner_bank_form
+msgid "Are you sure you want to retrieve the Fintoc ID for this bank account?"
+msgstr "¿Está seguro de que desea recuperar el ID de Fintoc para esta cuenta bancaria?"
+
+#. module: connector_fintoc
+#: model:ir.model,name:connector_fintoc.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Cuentas bancarias"
+
+#. module: connector_fintoc
+#: model:ir.model,name:connector_fintoc.model_account_bank_statement
+msgid "Bank Statement"
+msgstr "Estado de cuenta bancario"
+
+#. module: connector_fintoc
+#: model:ir.model,name:connector_fintoc.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Línea de estado de cuenta bancario"
+
+#. module: connector_fintoc
+#: model:ir.model,name:connector_fintoc.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: connector_fintoc
+#: model:ir.model.fields,help:connector_fintoc.field_account_setup_bank_manual_config__fintoc_days
+#: model:ir.model.fields,help:connector_fintoc.field_res_partner_bank__fintoc_days
+msgid "Day limit to search for movements"
+msgstr "Límite de días para buscar movimientos"
+
+#. module: connector_fintoc
+#: model:ir.model.fields,field_description:connector_fintoc.field_account_setup_bank_manual_config__fintoc_days
+#: model:ir.model.fields,field_description:connector_fintoc.field_res_partner_bank__fintoc_days
+msgid "Days Lookup"
+msgstr "Consulta de días"
+
+#. module: connector_fintoc
+#: model:ir.model.fields,field_description:connector_fintoc.field_account_bank_statement_line__fintoc_id
+msgid "Fintoc"
+msgstr "Fintoc"
+
+#. module: connector_fintoc
+#: model:ir.model.fields,field_description:connector_fintoc.field_account_setup_bank_manual_config__fintoc_id
+#: model:ir.model.fields,field_description:connector_fintoc.field_res_partner_bank__fintoc_id
+msgid "Fintoc Account ID"
+msgstr "Fintoc Account ID"
+
+#. module: connector_fintoc
+#: model:ir.model.fields,field_description:connector_fintoc.field_res_company__fintoc_api_key
+msgid "Fintoc Api Key"
+msgstr "Fintoc API Key"
+
+#. module: connector_fintoc
+#: model:ir.model.fields,field_description:connector_fintoc.field_account_setup_bank_manual_config__fintoc_token
+#: model:ir.model.fields,field_description:connector_fintoc.field_res_partner_bank__fintoc_token
+msgid "Fintoc Token"
+msgstr "Fintoc Token"
+
+#. module: connector_fintoc
+#: model:ir.actions.server,name:connector_fintoc.ir_cron_fix_bank_statement_balances_ir_actions_server
+msgid "Fintoc: Recompute Bank Statement Balances"
+msgstr "Fintoc: recalcular saldos de extractos bancarios"
+
+#. module: connector_fintoc
+#: model:ir.actions.server,name:connector_fintoc.ir_cron_bank_statements_ir_actions_server
+msgid "Fintoc: Synchronize Bank Statements"
+msgstr "Fintoc: Sincronizar extractos bancarios"
+
+#. module: connector_fintoc
+#: model_terms:ir.ui.view,arch_db:connector_fintoc.view_partner_bank_form
+msgid "Get Fintoc Account ID"
+msgstr "Obtener ID Cuenta Fintoc"
+
+#. module: connector_fintoc
+#: model:ir.model.fields,help:connector_fintoc.field_account_setup_bank_manual_config__fintoc_id
+#: model:ir.model.fields,help:connector_fintoc.field_res_partner_bank__fintoc_id
+msgid "Identifier associated with this account in Fintoc"
+msgstr "Identificador asociado a esta cuenta en Fintoc"
+
+#. module: connector_fintoc
+#: model:ir.model.fields,help:connector_fintoc.field_account_bank_statement_line__fintoc_id
+msgid "Movement identifier in Fintoc"
+msgstr "Identificador de movimiento en Fintoc"
+
+#. module: connector_fintoc
+#: model:ir.model.fields,help:connector_fintoc.field_account_setup_bank_manual_config__fintoc_token
+#: model:ir.model.fields,help:connector_fintoc.field_res_partner_bank__fintoc_token
+msgid "Token associated with this account in Fintoc"
+msgstr "Token asociado a esta cuenta en Fintoc"
