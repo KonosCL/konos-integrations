@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+buk_connector.access_buk_instance,access_buk_instance,buk_connector.model_buk_instance,account.group_account_manager,1,1,1,1
+buk_connector.access_buk_account_mapping,access_buk_account_mapping,buk_connector.model_buk_account_mapping,account.group_account_manager,1,1,1,1
+buk_connector.access_buk_cost_center_mapping,access_buk_cost_center_mapping,buk_connector.model_buk_cost_center_mapping,account.group_account_manager,1,1,1,1
+buk_connector.access_buk_accounting_period,access_buk_accounting_period,buk_connector.model_buk_accounting_period,account.group_account_manager,1,1,1,1

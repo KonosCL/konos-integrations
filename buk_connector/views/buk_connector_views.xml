@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2024 Konos
+    Licensed under the GPL-3.0 License or later. -->
+<odoo>
+    <record id="buk_instance_form_view" model="ir.ui.view">
+        <field name="name">buk.instance.form.view</field>
+        <field name="model">buk.instance</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Sync Master Data" type="object" name="sync_master_data" class="oe_highlight"
+                        confirm="Are you sure you want to sync the master data from Buk?"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="e.g. Production Instance" required="True"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="buk_id"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company" required="True" readonly="True"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="parameters" string="Parameters">
+                            <group>
+                                <group string="Configuration">
+                                    <field name="token" password="True" required="True"/>
+                                    <field name="base_url" required="True"/>
+                                    <field name="centralization_ep" required="True" readonly="True" invisible="True"/>
+                                    <field name="ledger_account_ep" required="True" readonly="True" invisible="True"/>
+                                    <field name="cost_center_ep" required="True" readonly="True" invisible="True"/>
+                                </group>
+                                <group string="Default values">
+                                    <field name="account_id" required="True"
+                                        options="{'no_open': True, 'no_create' : True}"/>
+                                    <field name="analytic_account_id" required="True"
+                                        options="{'no_open': True, 'no_create' : True}"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="buk_instance_tree_view" model="ir.ui.view">
+        <field name="name">buk.instance.tree.view</field>
+        <field name="model">buk.instance</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="account_id"/>
+                <field name="analytic_account_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="buk_account_mapping_tree_view" model="ir.ui.view">
+        <field name="name">buk.account.mapping.tree.view</field>
+        <field name="model">buk.account.mapping</field>
+        <field name="arch" type="xml">
+            <list editable="top">
+                <field name="name" required="True"/>
+                <field name="code" required="True"/>
+                <field name="account_id" options="{'no_open': True, 'no_create' : True}"/>
+                <field name="company_id" required="True" readonly="True"/>
+                <field name="instance_id" options="{'no_open': True, 'no_create' : True}" required="True"/> <!-- domain="[('config_ids', 'in', config_id)]" -->
+            </list>
+        </field>
+    </record>
+
+    <record id="buk_cost_center_mapping_tree_view" model="ir.ui.view">
+        <field name="name">buk.cost.center.mapping.tree.view</field>
+        <field name="model">buk.cost.center.mapping</field>
+        <field name="arch" type="xml">
+            <list editable="top">
+                <field name="name" required="True"/>
+                <field name="code" required="True"/>
+                <field name="analytic_account_id" options="{'no_open': True, 'no_create' : True}"/>
+                <field name="company_id" required="True" readonly="True"/>
+                <field name="instance_id" options="{'no_open': True, 'no_create' : True}" required="True"/> <!-- domain="[('config_ids', 'in', config_id)]" -->
+            </list>
+        </field>
+    </record>
+
+
+    <record id="buk_accounting_period_form_view" model="ir.ui.view">
+        <field name="name">buk.accounting.period.form.view</field>
+        <field name="model">buk.accounting.period</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                    <button string="Import Period" type="object" name="import_period" class="oe_highlight"
+                        confirm="Are you sure you want to import this period from Buk?"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="e.g. Period 2024-12" required="True"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="month" required="True"/>
+                            <field name="year" required="True"/>
+                            <field name="company_id" groups="base.group_multi_company" required="True" readonly="True"/>
+                        </group>
+                        <group>
+                            <field name="journal_id" required="True" options="{'no_open': True, 'no_create' : True}"/>
+                            <field name="account_move_id" readonly="True"/>
+                            <field name="instance_id" options="{'no_open': True, 'no_create' : True}" required="True"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="buk_accounting_period_tree_view" model="ir.ui.view">
+        <field name="name">buk.accounting.period.tree.view</field>
+        <field name="model">buk.accounting.period</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="month"/>
+                <field name="year"/>
+                <field name="account_move_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="buk_instance_action" model="ir.actions.act_window">
+        <field name="name">Instance</field>
+        <field name="res_model">buk.instance</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Configure the integration settings with Buk.
+            </p><p>
+                Use this section to set up the parameters necessary to connect Buk with your Odoo system and start working.
+            </p>
+        </field>
+    </record>
+    <record id="buk_account_mapping_action" model="ir.actions.act_window">
+        <field name="name">Accounts</field>
+        <field name="res_model">buk.account.mapping</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Configure the account mapping between Buk and Odoo.
+            </p><p>
+                Set up how Buk accounts are mapped to Odoo accounting accounts. This ensures that financial data is correctly synchronized.
+            </p>
+        </field>
+    </record>
+    <record id="buk_cost_center_mapping_action" model="ir.actions.act_window">
+        <field name="name">Cost Centers</field>
+        <field name="res_model">buk.cost.center.mapping</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Configure cost center mapping between Buk and Odoo.
+            </p><p>
+                Set up how Buk cost centers are mapped to Odoo analytic accounts. This will ensure that cost center data is properly aligned between both systems.
+
+            </p>
+        </field>
+    </record>
+    <record id="buk_accounting_period_action" model="ir.actions.act_window">
+        <field name="name">Periods</field>
+        <field name="res_model">buk.accounting.period</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                View the periods imported from Buk.
+            </p><p>
+                Track and manage the accounting periods that have already been imported from Buk into Odoo.
+            </p>
+        </field>
+    </record>
+
+    <!-- Root menu -->
+    <menuitem id="menu_buk_root" name="Buk" web_icon="buk_connector,static/description/buk.png">
+        <menuitem id="menu_buk_data" name="Data">
+            <menuitem id="menu_buk_accounting" name="Accounting">
+                <menuitem id="menu_buk_accounting_period" name="Periods"
+                    action="buk_accounting_period_action"/>
+            </menuitem>
+        </menuitem>
+        <menuitem id="menu_buk_config" name="Configuration">
+            <menuitem id="menu_buk_instance" name="Instance"
+                action="buk_instance_action"/>
+            <menuitem id="menu_buk_account" name="Accounts"
+                action="buk_account_mapping_action"/>
+            <menuitem id="menu_buk_cost_center" name="Cost Centers"
+                action="buk_cost_center_mapping_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>

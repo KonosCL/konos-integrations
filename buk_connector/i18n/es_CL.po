@@ -1,0 +1,608 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* buk_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e-20241007\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-13 16:55+0000\n"
+"PO-Revision-Date: 2024-12-13 16:55+0000\n"
+"Last-Translator: Alexander Olivares <aolivares@konos.cl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__account_id
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__account_move_id
+msgid "Account Move"
+msgstr "Asiento contable"
+
+#. module: buk_connector
+#: model:ir.ui.menu,name:buk_connector.menu_buk_accounting
+msgid "Accounting"
+msgstr "Contabilidad"
+
+#. module: buk_connector
+#: model:ir.actions.act_window,name:buk_connector.buk_account_mapping_action
+#: model:ir.ui.menu,name:buk_connector.menu_buk_account
+msgid "Accounts"
+msgstr "Cuentas"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__message_needaction
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__message_needaction
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__message_needaction
+msgid "Action Needed"
+msgstr "Acción Necesaria"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__analytic_account_id
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__analytic_account_id
+msgid "Analytic Account"
+msgstr "Cuenta Analítica"
+
+#. module: buk_connector
+#: model_terms:ir.ui.view,arch_db:buk_connector.buk_accounting_period_form_view
+msgid "Are you sure you want to import this period from Buk?"
+msgstr "¿Estás seguro de que deseas importar este período desde Buk?"
+
+#. module: buk_connector
+#: model_terms:ir.ui.view,arch_db:buk_connector.buk_instance_form_view
+msgid "Are you sure you want to sync the master data from Buk?"
+msgstr "¿Estás seguro de que deseas sincronizar los datos maestros de Buk?"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__message_attachment_count
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__message_attachment_count
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__message_attachment_count
+msgid "Attachment Count"
+msgstr "Recuento de Adjuntos"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__base_url
+msgid "Base URL of the Buk API"
+msgstr "URL base de la API de Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__base_url
+msgid "Base Url"
+msgstr "URL base"
+
+#. module: buk_connector
+#: model:ir.ui.menu,name:buk_connector.menu_buk_root
+msgid "Buk"
+msgstr "Buk"
+
+#. module: buk_connector
+#: model:ir.model,name:buk_connector.model_buk_account_mapping
+msgid "Buk Accounting Account Mapping"
+msgstr "Mapeo de cuentas contables de Buk"
+
+#. module: buk_connector
+#: model:ir.model,name:buk_connector.model_buk_accounting_period
+msgid "Buk Accounting Period"
+msgstr "Período contable de Buk"
+
+#. module: buk_connector
+#: model:ir.model,name:buk_connector.model_buk_cost_center_mapping
+msgid "Buk Cost Center Mapping"
+msgstr "Mapeo de centros de costo de Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__buk_id
+msgid "Buk ID"
+msgstr "ID Buk"
+
+#. module: buk_connector
+#: model:ir.model,name:buk_connector.model_buk_instance
+msgid "Buk Instance"
+msgstr "Instancia Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__centralization_ep
+msgid "Centralization"
+msgstr "Centralización"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__code
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__code
+msgid "Code"
+msgstr "Código"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__code
+msgid ""
+"Code of the Buk account. This code is used to identify the\n"
+" account within Buk"
+msgstr "Código de la cuenta de Buk. Este código se utiliza para identificar la cuenta dentro de Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_cost_center_mapping__code
+msgid ""
+"Code of the Buk cost center. This code is used to uniquely\n"
+" identify the cost center within Buk"
+msgstr "Código del centro de costos de Buk. Este código se utiliza para identificar de forma única el centro de costos dentro de Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__company_id
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__company_id
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__company_id
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__company_id
+msgid ""
+"Company to which this Buk account equivalence belongs. If\n"
+" not selected, the current user's company will be used."
+msgstr "Empresa a la que pertenece esta equivalencia de cuenta Buk. Si no se selecciona, se utilizará la empresa del usuario actual"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_cost_center_mapping__company_id
+msgid ""
+"Company to which this Buk cost center belongs. If not\n"
+" selected, the current user's company will be used"
+msgstr "Empresa a la que pertenece este centro de costos de Buk. Si no se selecciona, se utilizará la empresa del usuario actual"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__company_id
+msgid ""
+"Company to which this Buk instance belongs. If not selected,\n"
+" the current user's company will be used"
+msgstr "Empresa a la que pertenece esta instancia de Buk. Si no se selecciona, se utilizará la empresa del usuario actual"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__company_id
+msgid ""
+"Company to which this Buk period is related. This defines\n"
+" which company the period belongs to"
+msgstr "Empresa a la que se refiere este periodo Buk. Esto define a qué empresa pertenece el periodo"
+
+#. module: buk_connector
+#: model:ir.ui.menu,name:buk_connector.menu_buk_config
+#: model_terms:ir.ui.view,arch_db:buk_connector.buk_instance_form_view
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: buk_connector
+#: model_terms:ir.actions.act_window,help:buk_connector.buk_cost_center_mapping_action
+msgid "Configure cost center mapping between Buk and Odoo."
+msgstr "Configurar el mapeo de centros de costos entre Buk y Odoo."
+
+#. module: buk_connector
+#: model_terms:ir.actions.act_window,help:buk_connector.buk_account_mapping_action
+msgid "Configure the account mapping between Buk and Odoo."
+msgstr "Configurar el mapeo de cuentas entre Buk y Odoo."
+
+#. module: buk_connector
+#: model_terms:ir.actions.act_window,help:buk_connector.buk_instance_action
+msgid "Configure the integration settings with Buk."
+msgstr "Configure los ajustes de integración con Buk."
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__cost_center_ep
+msgid "Cost Center"
+msgstr "Centro de Costo"
+
+#. module: buk_connector
+#: model:ir.actions.act_window,name:buk_connector.buk_cost_center_mapping_action
+#: model:ir.ui.menu,name:buk_connector.menu_buk_cost_center
+msgid "Cost Centers"
+msgstr "Centros de Costo"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__create_uid
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__create_uid
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__create_uid
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__create_date
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__create_date
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__create_date
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: buk_connector
+#: model:ir.ui.menu,name:buk_connector.menu_buk_data
+msgid "Data"
+msgstr "Data"
+
+#. module: buk_connector
+#: model_terms:ir.ui.view,arch_db:buk_connector.buk_instance_form_view
+msgid "Default values"
+msgstr "Valores predeterminados"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__name
+msgid "Descriptive name to easily identify this Buk instance"
+msgstr "Nombre descriptivo para identificar fácilmente esta instancia de Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__display_name
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__display_name
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__display_name
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: buk_connector
+#: model:ir.model.fields.selection,name:buk_connector.selection__buk_accounting_period__state__done
+msgid "Done"
+msgstr "Hecho"
+
+#. module: buk_connector
+#: model:ir.model.fields.selection,name:buk_connector.selection__buk_accounting_period__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__message_follower_ids
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__message_follower_ids
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__message_partner_ids
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__message_partner_ids
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Clientes)"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__has_message
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__has_message
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__has_message
+msgid "Has Message"
+msgstr "Tiene mensaje"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__id
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__id
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__id
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__id
+msgid "ID"
+msgstr "ID"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__message_needaction
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__message_needaction
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcada, los mensajes nuevos requieren su atención."
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__message_has_error
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__message_has_sms_error
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__message_has_error
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__message_has_sms_error
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__message_has_error
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcada, algunos mensajes tendrán un error de entrega."
+
+#. module: buk_connector
+#: model_terms:ir.ui.view,arch_db:buk_connector.buk_accounting_period_form_view
+msgid "Import Period"
+msgstr "Importar Periodo"
+
+#. module: buk_connector
+#: model:ir.actions.act_window,name:buk_connector.buk_instance_action
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__instance_id
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__instance_id
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__instance_id
+#: model:ir.ui.menu,name:buk_connector.menu_buk_instance
+msgid "Instance"
+msgstr "Instancia"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__instance_id
+msgid "Instance related to this Buk account equivalence"
+msgstr "Instancia relacionada con esta equivalencia de cuenta Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_cost_center_mapping__instance_id
+msgid "Instance related to this Buk cost center equivalence"
+msgstr "Instancia relacionada con esta equivalencia de centro de costo de Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__instance_id
+msgid "Instance related to this Buk period"
+msgstr "Instancia relacionada con este periodo Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__message_is_follower
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__message_is_follower
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__account_move_id
+msgid ""
+"Journal entry for this period. This links the Buk period\n"
+" to an Odoo accounting entry"
+msgstr "Entrada de diario para este período. Esto vincula el período de Buk con una entrada contable de Odoo"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__journal_id
+msgid "Journal where the entries will be generated"
+msgstr "Diario donde se generarán las entradas"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__write_uid
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__write_uid
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__write_uid
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__write_date
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__write_date
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__write_date
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__ledger_account_ep
+msgid "Ledger Account"
+msgstr "Plan de Cuenta"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__message_has_error
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__message_has_error
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__message_has_error
+msgid "Message Delivery error"
+msgstr "Error en la entrega del mensaje"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__message_ids
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__message_ids
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__month
+msgid "Month"
+msgstr "Mes"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__month
+msgid "Month for which the Buk period data is imported"
+msgstr "Mes para el cual se importan los datos del período Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__name
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__name
+#: model:ir.model.fields,field_description:buk_connector.field_buk_cost_center_mapping__name
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__name
+msgid ""
+"Name of the Buk account. This is the account's identifier in Buk"
+msgstr "Nombre de la cuenta de Buk. Este es el identificador de la cuenta en Buk."
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_cost_center_mapping__name
+msgid ""
+"Name of the Buk cost center. This is the identifier used\n"
+" in Buk for the cost center"
+msgstr "Nombre del centro de costos de Buk. Este es el identificador que se utiliza en Buk para el centro de costos."
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__name
+msgid "Name of the Buk period"
+msgstr "Nombre del periodo Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__message_needaction_counter
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__message_needaction_counter
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__message_has_error_counter
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__message_has_error_counter
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__message_needaction_counter
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__message_needaction_counter
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes que requieren acción"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__message_has_error_counter
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__message_has_error_counter
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: buk_connector
+#: model_terms:ir.ui.view,arch_db:buk_connector.buk_instance_form_view
+msgid "Parameters"
+msgstr "Parámetros"
+
+#. module: buk_connector
+#: model:ir.actions.act_window,name:buk_connector.buk_accounting_period_action
+#: model:ir.ui.menu,name:buk_connector.menu_buk_accounting_period
+msgid "Periods"
+msgstr "Periodos"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__message_has_sms_error
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__message_has_sms_error
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega de SMS"
+
+#. module: buk_connector
+#: model_terms:ir.actions.act_window,help:buk_connector.buk_account_mapping_action
+msgid ""
+"Set up how Buk accounts are mapped to Odoo accounting accounts. This ensures"
+" that financial data is correctly synchronized."
+msgstr "Configura cómo se asignan las cuentas de Buk a las cuentas contables de Odoo. Esto garantiza que los datos financieros se sincronicen correctamente."
+
+#. module: buk_connector
+#: model_terms:ir.actions.act_window,help:buk_connector.buk_cost_center_mapping_action
+msgid ""
+"Set up how Buk cost centers are mapped to Odoo analytic accounts. This will "
+"ensure that cost center data is properly aligned between both systems."
+msgstr "Configurar cómo se asignan los centros de costos de Buk a las cuentas analíticas de Odoo. Esto garantizará que los datos de los centros de costos estén correctamente alineados entre ambos sistemas."
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: buk_connector
+#: model_terms:ir.ui.view,arch_db:buk_connector.buk_instance_form_view
+msgid "Sync Master Data"
+msgstr "Sincronizar Data"
+
+#. module: buk_connector
+#: model:ir.model.constraint,message:buk_connector.constraint_buk_accounting_period_unique_month_year_company
+msgid "The combination of month and year must be unique per company."
+msgstr "La combinación de mes y año debe ser única por empresa."
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_cost_center_mapping__analytic_account_id
+msgid ""
+"The corresponding analytic account in Odoo. This is the Odoo\n"
+" account linked to the Buk cost center"
+msgstr "La cuenta analítica correspondiente en Odoo. Esta es la cuenta de Odoo vinculada al centro de costos de Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__account_id
+msgid ""
+"The equivalent account in Odoo. This is the Odoo account\n"
+" that corresponds to the Buk account"
+msgstr "La cuenta equivalente en Odoo. Esta es la cuenta de Odoo que corresponde a la cuenta de Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__account_id
+msgid ""
+"This account will be used if no matching Buk account is found\n"
+" during the import process"
+msgstr "Esta cuenta se utilizará si no se encuentra ninguna cuenta Buk coincidente durante el proceso de importación"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__analytic_account_id
+msgid ""
+"This account will be used if no matching Buk cost center is\n"
+" found during the import process"
+msgstr "Esta cuenta se utilizará si no se encuentra ningún centro de costos de Buk coincidente durante el proceso de importación"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__token
+msgid "This string is required to access Buk's API"
+msgstr "Esta cadena es necesaria para acceder a la API de Buk"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__token
+msgid "Token"
+msgstr "Token"
+
+#. module: buk_connector
+#: model_terms:ir.actions.act_window,help:buk_connector.buk_accounting_period_action
+msgid ""
+"Track and manage the accounting periods that have already been imported from"
+" Buk into Odoo."
+msgstr "Realice un seguimiento y administre los períodos contables que ya se han importado desde Buk a Odoo."
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__centralization_ep
+msgid "URL of the accounting centralization endpoint."
+msgstr "URL del enpoint de centralización contable."
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__cost_center_ep
+msgid "URL of the cost center endpoint"
+msgstr "URL del endpoint del centro de costos"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__ledger_account_ep
+msgid "URL of the ledger account endpoint"
+msgstr "URL del endpoint de la cuenta contable"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__buk_id
+msgid ""
+"Unique ID assigned to the company in Buk. If empty, the,\n"
+" company's tax ID (RUT) will be used as the identifier"
+msgstr "Identificador único asignado a la empresa en Buk. Si está vacío, se utilizará como identificador el RUT de la empresa."
+
+#. module: buk_connector
+#: model_terms:ir.actions.act_window,help:buk_connector.buk_instance_action
+msgid ""
+"Use this section to set up the parameters necessary to connect Buk with your"
+" Odoo system and start working."
+msgstr "Utilice esta sección para configurar los parámetros necesarios para conectar Buk con su sistema Odoo y comenzar a trabajar."
+
+#. module: buk_connector
+#: model_terms:ir.actions.act_window,help:buk_connector.buk_accounting_period_action
+msgid "View the periods imported from Buk."
+msgstr "Ver los periodos importados desde Buk."
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_account_mapping__website_message_ids
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__website_message_ids
+#: model:ir.model.fields,field_description:buk_connector.field_buk_instance__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_account_mapping__website_message_ids
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__website_message_ids
+#: model:ir.model.fields,help:buk_connector.field_buk_instance__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"
+
+#. module: buk_connector
+#: model:ir.model.fields,field_description:buk_connector.field_buk_accounting_period__year
+msgid "Year"
+msgstr "Año"
+
+#. module: buk_connector
+#: model:ir.model.fields,help:buk_connector.field_buk_accounting_period__year
+msgid "Year for which the Buk period data is imported"
+msgstr "Año para el cual se importan los datos del período Buk"
+
+#. module: buk_connector
+#: model_terms:ir.ui.view,arch_db:buk_connector.buk_accounting_period_form_view
+msgid "e.g. Period 2024-12"
+msgstr "E.j. Periodo 2024-12"
+
+#. module: buk_connector
+#: model_terms:ir.ui.view,arch_db:buk_connector.buk_instance_form_view
+msgid "e.g. Production Instance"
+msgstr "E.j. Producción"
