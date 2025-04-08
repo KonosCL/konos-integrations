@@ -1,0 +1,58 @@
+name: Bug report
+description: Did you find an error? Let us know
+title: "[BANCH] module: description"
+labels: ["bug"]
+assignees:
+  - alxolivares
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Impacted version
+      description: Branch where the bug was found. This is usually the same as the title of the issue.
+      placeholder: E.g. 17.0
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What happened?
+      description: Steps to reproduce the behavior.
+      value: |
+        1. Go to '...'
+        2. Select '...' and click on '...'
+        ...
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current behavior
+      description: A clear and concise description of what the bug is.
+      placeholder: E.g. After click on '....' you should see '....'
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: E.g. You should be able to do '....'
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Include any relevant traceback or error message if you have some.
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Include any other information about the problem here.
+      placeholder: E.g. In the attached link you will find a video with '....'
+    validations:
+      required: false

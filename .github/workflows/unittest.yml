@@ -1,0 +1,105 @@
+name: unittests
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  unittests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.GH_TOKEN }}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          eval $(ssh-agent -s)
+          ssh-add ~/.ssh/id_rsa
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+
+          if ssh-add -l; then
+            echo "SSH key added successfully."
+          else
+            echo "Error adding SSH key."
+            exit 1
+          fi
+
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+
+      - name: Clone Odoo from GitHub
+        run: |
+          git clone git@github.com:KonosCL/odoo.git -b 18.0 --depth 1
+
+      - name: Clone Enterprise from GitHub (Private Repository)
+        run: |
+          git clone git@github.com:KonosCL/enterprise.git -b 18.0 --depth 1
+
+      - name: Set Up Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql postgresql-client nodejs npm
+          sudo npm install -g rtlcss
+          sudo apt-get install -y wkhtmltopdf
+
+      - name: Install Odoo dependencies
+        run: |
+          sudo apt-get install -y git build-essential libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev libjpeg-dev libpq-dev libffi-dev libjpeg8-dev liblcms2-dev libblas-dev libatlas-base-dev python3-dev python3-pip python3-setuptools python3-wheel
+          python3 -m pip install -r odoo/requirements.txt
+
+      - name: Setup PostgreSQL
+        run: |
+          sudo service postgresql start
+          sudo -u postgres createuser -s $USER
+          createdb test_db
+
+      - name: Get changed files
+        id: changed_files
+        run: |
+          git diff --name-only origin/18.0...HEAD > changed_files.txt
+          cat changed_files.txt
+
+      - name: Filter Odoo modules
+        run: |
+          cat changed_files.txt | grep -E '^[^/]+/' | grep -v '^.github/' | cut -d '/' -f1 | sort -u > modules_to_test.txt
+          cat modules_to_test.txt  
+
+      - name: Install additional requirements if found
+        run: |
+          if [ -f "$GITHUB_WORKSPACE/requirements.txt" ]; then
+            echo "Installing requirements.txt found in repository root..."
+            python3 -m pip install -r $GITHUB_WORKSPACE/requirements.txt
+          fi
+
+          while read module; do
+            if [ -f "$GITHUB_WORKSPACE/$module/requirements.txt" ]; then
+              echo "Installing requirements.txt found in $module..."
+              python3 -m pip install -r $GITHUB_WORKSPACE/$module/requirements.txt
+            fi
+          done < modules_to_test.txt
+
+      - name: Run tests on modified modules
+        run: |
+          if [ -s modules_to_test.txt ]; then
+            while read module; do
+              echo "Checking if module $module has tests..."
+              if [ -d "$GITHUB_WORKSPACE/$module/tests" ] || ls $GITHUB_WORKSPACE/$module/tests/*.py > /dev/null 2>&1; then
+                echo "Running tests for module: $module"
+                python3 odoo/odoo-bin -d test_db --addons-path=$GITHUB_WORKSPACE,$GITHUB_WORKSPACE/odoo/addons,$GITHUB_WORKSPACE/enterprise --init=$module --test-enable --test-tags=/$module --workers 0 --stop-after-init
+              else
+                echo "No tests found for module: $module. Skipping tests."
+              fi
+            done < modules_to_test.txt
+          else
+            echo "No Odoo modules changed"
+          fi

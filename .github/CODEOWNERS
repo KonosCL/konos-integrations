@@ -1,0 +1,10 @@
+# This file defines the default owners for the repository.
+# The owners listed here will be automatically requested
+# for review on any Pull Request opened, unless a more
+# specific rule overrides this.
+*       @alxolivares
+# Important: The CODEOWNERS feature is available if you use GitHub Pro
+# or if the repository is public.
+
+# For more information about CODEOWNERS visit:
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners

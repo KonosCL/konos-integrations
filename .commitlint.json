@@ -1,0 +1,27 @@
+{
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "header-max-length": [1, "always", 50],
+    "subject-empty": [2, "never"],
+    "type-enum": [
+      2,
+      "always",
+      ["FIX", "REF", "ADD", "REM", "REV", "MOV", "IMP", "I18N"]
+    ],
+    "type-case": [2, "always", "upper-case"],
+    "type-empty": [2, "never"],
+    "scope-case": [2, "always", "lower-case"],
+    "subject-case": [2, "always", "sentence-case"],
+    "subject-full-stop": [2, "never", "."],
+    "body-empty": [2, "never"],
+    "body-leading-blank": [2, "always"],
+    "body-max-line-length": [2, "always", 72],
+    "footer-leading-blank": [2, "always"]
+  },
+  "parserPreset": {
+    "parserOpts": {
+      "headerPattern": "^\\[(\\w+)]\\s(\\w+):\\s(.+)$",
+      "headerCorrespondence": ["type", "scope", "subject"]
+    }
+  }
+}
