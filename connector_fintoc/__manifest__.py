@@ -9,7 +9,7 @@
     "author": "Konos",
     "website": "https://www.konos.cl",
     "category": "Accounting/Accounting",
-    "version": "18.0.3.0.0",
+    "version": "18.0.4.0.0",
     "depends": [
         "account_accountant",
     ],
@@ -22,5 +22,5 @@
     "images": [
         "static/description/banner.png",
     ],
-    "license": "GPL-3",
+    "license": "LGPL-3",
 }
